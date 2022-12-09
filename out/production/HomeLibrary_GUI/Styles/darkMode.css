@@ -1,0 +1,11 @@
+.primary-color{
+    -fx-background-color: #4b4b4b;
+}
+
+.secondary-color{
+    -fx-background-color: #b95600;
+}
+
+.label{
+    -fx-text-fill: "white";
+}

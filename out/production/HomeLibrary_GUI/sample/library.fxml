@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="680.0" stylesheets="@../Styles/lightMode.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LibraryController">
+   <top>
+      <AnchorPane fx:id="topLine" prefHeight="64.0" prefWidth="680.0" styleClass="secondary-color" stylesheets="@../Styles/lightMode.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="exitImageView" fitHeight="44.0" fitWidth="49.0" layoutX="622.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bookImageView" fitHeight="51.0" fitWidth="61.0" layoutX="31.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/book.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="93.0" layoutY="19.0" text="Home Library">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="modeButton" layoutX="489.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#changeModeAction" prefHeight="50.0" prefWidth="50.0" styleClass="secondary-color">
+               <graphic>
+                  <ImageView fx:id="modeButtonImage" fitHeight="71.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="secondary-color">
+                     <image>
+                        <Image url="@../../images/moon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="modeButton1" layoutX="568.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#toSortListView" prefHeight="50.0" prefWidth="50.0" styleClass="secondary-color">
+               <graphic>
+                  <ImageView fx:id="sortImageView" fitHeight="71.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="secondary-color">
+                     <image>
+                        <Image url="@../../images/sort.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="exitButton" layoutX="624.0" layoutY="11.0" mnemonicParsing="false" onAction="#exitButtonAction" opacity="0.0" prefHeight="47.0" prefWidth="39.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <ListView fx:id="bookListView" editable="true" prefHeight="470.0" prefWidth="259.0" styleClass="primary-color" stylesheets="@../Styles/lightMode.css" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane fx:id="base" prefHeight="456.0" prefWidth="403.0" styleClass="primary-color" stylesheets="@../Styles/lightMode.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="authorNameTextField" layoutX="55.0" layoutY="53.0" prefHeight="26.0" prefWidth="309.0" promptText="Author's name" />
+            <Label layoutX="55.0" layoutY="33.0" text="Author's name">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="93.0" text="Author's gender">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bookTitleTextField" layoutX="55.0" layoutY="153.0" prefHeight="26.0" prefWidth="309.0" promptText="Book's title" />
+            <Label layoutX="55.0" layoutY="133.0" text="Book's title">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="dateTextField" layoutX="55.0" layoutY="208.0" prefHeight="26.0" prefWidth="309.0" promptText="Year of release" />
+            <Label layoutX="55.0" layoutY="188.0" text="Year of release">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="addButton" layoutX="234.0" layoutY="277.0" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="34.0" prefWidth="130.0" styleClass="secondary-color" text="Add">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeButton" layoutX="234.0" layoutY="322.0" mnemonicParsing="false" onAction="#removeButtonAction" prefHeight="34.0" prefWidth="130.0" styleClass="secondary-color" text="Remove">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="emptyFieldsLabel" alignment="CENTER" layoutX="8.0" layoutY="244.0" prefHeight="18.0" prefWidth="403.0" textFill="#c40000">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="genderTextField" layoutX="168.0" layoutY="89.0" prefHeight="26.0" prefWidth="197.0" promptText="Gender" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
